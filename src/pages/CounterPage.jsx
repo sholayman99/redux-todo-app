@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import Counter from "../components/Counter.jsx";
+import Counter from "../components/counter/Counter.jsx";
 
 const CounterPage = () => {
     return (

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React,{useRef} from 'react';
 import {useSelector,useDispatch} from "react-redux";
-import {increment, decrement, setCustom} from "../redux/state/counter/counterSlice.js"
+import {increment, decrement, setCustom} from "../../redux/state/counter/counterSlice.js"
 
 const Counter = () => {
     const custom = useRef();

@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import CounterPage from "./pages/CounterPage.jsx";
+import TodoPage from "./pages/TodoPage.jsx";
 
 const App = () => {
     return (
         <div>
-        <CounterPage />
+        {/*<CounterPage />*/}
+            <TodoPage />
         </div>
     );
 };
