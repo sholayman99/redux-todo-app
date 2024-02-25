@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React,{useRef} from 'react';
 import {useSelector,useDispatch} from "react-redux";
-import {increment,decrement} from "../redux/state/counter/counterSlice.js"
+import {increment, decrement, setCustom} from "../redux/state/counter/counterSlice.js"
 
 const Counter = () => {
-
+    const custom = useRef();
     const count = useSelector((state)=>state.counter.value);
     const dispatch = useDispatch();
 
@@ -18,6 +18,10 @@ const Counter = () => {
                 <div className={"my-4"}>
                     <button onClick={()=>{dispatch(increment())}} className={"btn btn-success btn-lg ms-1"}>Increase</button>
                     <button onClick={()=>{dispatch(decrement())}} className={"btn btn-danger btn-lg ms-1"}>Decrease</button>
+                </div>
+                <div className={"my-4"}>
+                    <input ref={custom} className={"form-control ms-2 w-50"} type={"number"} />
+                    <button onClick={()=>{dispatch(setCustom(custom.current.value))}} className={"btn btn-warning btn-lg ms-2 my-2 w-50"}>Set Custom</button>
                 </div>
             </div>
         </div>
