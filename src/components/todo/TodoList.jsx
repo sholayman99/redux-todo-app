@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import {todoDeleteAlert} from "../../helper/todoDeleteAlert.js";
+import {todoUpdateAlert} from "../../helper/todoUpdateAlert.js";
 
 const TodoList = () => {
 
@@ -27,7 +28,7 @@ const TodoList = () => {
                                          <td>{i+1}</td>
                                          <td>{item}</td>
                                          <td>
-                                             <button className={"btn btn-dark"}>Edit</button>
+                                             <button onClick={()=>todoUpdateAlert(item,i)} className={"btn btn-dark"}>Edit</button>
                                          </td>
                                          <td>
                                              <button onClick={()=>{todoDeleteAlert(i)}} className={"btn btn-danger"}>Remove</button>
